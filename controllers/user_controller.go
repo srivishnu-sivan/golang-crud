@@ -6,7 +6,7 @@ import (
 	"go-crud/models"
 	"go-crud/database"
 	"net/http"
-
+	"fmt"
 	"github.com/gin-gonic/gin"
 
 )
@@ -99,6 +99,7 @@ func UpdateUser(c *gin.Context) {
 
 
 func DeleteUser(c * gin.Context){
+	
 	var user models.User
 	db := database.DB
 	id := c.Query("id")
